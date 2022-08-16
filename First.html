@@ -9,7 +9,19 @@
 </head>
 
 <body>
-    <script src="scripts/hello.js"></script>
+    <!-- <script src="scripts/hello.js"></script> -->
+    <label>姓名：<input id="inputName" type="text" value="abc"></label>
+    <script>
+        // //輸入
+        // const age = window.prompt("請輸入年紀：", 30);
+        // //輸出
+        // console.log(age);
+        const theName = document.getElementById("inputName");
+        //console.log(theName.value);
+        theName.addEventListener("input", function () {
+            console.log(theName.value);
+        })
+    </script>
 </body>
 
 </html>
