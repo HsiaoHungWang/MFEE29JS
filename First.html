@@ -10,7 +10,7 @@
 
 <body>
     <!-- <script src="scripts/hello.js"></script> -->
-    <label>姓名：<input id="inputName" type="text" value="abc"></label>
+    <label>姓名：<input id="inputName" type="text" placeholder="guest"></label>
     <script>
         // //輸入
         // const age = window.prompt("請輸入年紀：", 30);
@@ -18,9 +18,14 @@
         // console.log(age);
         const theName = document.getElementById("inputName");
         //console.log(theName.value);
+        //input => 當使用者在文字輸入方塊輸入的時候就會觸發這個事件
         theName.addEventListener("input", function () {
             console.log(theName.value);
         })
+        //blur => 使用者離開物件會觸發這個事件
+        // theName.addEventListener("blur", function () {
+        //     console.log(theName.value);
+        // })
     </script>
 </body>
 
