@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myH {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="myH">First JavaScript Demo</h1>
+
+    <script>
+        //找到要控制的元素
+        const theDiv = document.getElementById("myH");
+        //改變物件的顏色
+        //theDiv.style.color = "yellow";
+        //設定滑鼠移到物件上的事件 mouseover
+        theDiv.addEventListener("mouseover", function () {
+            theDiv.style.color = "red";
+        })
+        //設定滑鼠離開物件上的事件 mouseout
+        theDiv.addEventListener("mouseout", function () {
+            theDiv.style.color = "green";
+        })
+
+        //設定樣式
+        //obj.style.[css樣式]= [css樣式值]
+        //background-color
+        //obj.style.backgroundColor = "yellow"
+    </script>
+</body>
+
+</html>
