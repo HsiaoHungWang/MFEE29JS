@@ -89,12 +89,62 @@
         // 10 + 10 => 20
         // let x = window.prompt("請輸入數字", 10);
         // let y = window.prompt("請輸入數字", 10);
-        let x = Number(window.prompt("請輸入數字", 10));
-        let y = Number(window.prompt("請輸入數字", 10));
-        console.log(x + y);  //1010
+        // let x = Number(window.prompt("請輸入數字", 10));
+        // let y = Number(window.prompt("請輸入數字", 10));
+        // console.log(x + y);  //1010
         // console.log(typeof Number(x));
         // console.log(typeof parseInt(y, 10));
         // console.log(Number(x) + parseInt(y, 10));
+
+        //明確型別轉換
+        //0、""、undefined、null 透過Boolean()會轉型成false
+        // console.log(Boolean(0));  //false
+        // console.log(Boolean("")); //false
+        // console.log(Boolean(undefined)); //false
+        // console.log(Boolean(null));  //false
+        // console.log(Boolean(1));  //true
+        // console.log(Boolean("0")); //?? true
+        // console.log(Boolean([]));//?? true
+        // console.log(Boolean({}));//?? true
+
+        // let x = "123";
+        // console.log(typeof x);
+        // x = Number("123");
+        // console.log(typeof x);
+        //console.log(Number("123"));
+
+        // console.log(Number(true));  //1
+        // console.log(Number(false));  //0
+        // // console.log(String(56));
+        // console.log(String(true));  //true
+        // console.log(String(null));  //null
+
+        //隱含型別轉換
+        //let x = 10
+        // x + "" =>string
+        //x = "10"
+        // +x => number
+        let x = 10;
+        console.log(typeof x); //number
+        x = x + "";
+        console.log(typeof x); //string
+        x = +x;
+        console.log(typeof x); //number
+
+        //!x => ! > not
+        //!!x
+
+        console.log(parseInt("10", 10));    //10
+        console.log(parseInt("1A", 10));    //1
+        console.log(parseInt("1A", 16));   //1>16+A>10=>26
+        console.log(parseInt("15.6", 10)); //15
+        console.log(parseInt("A1", 10));   //NaN => Not a Number
+
+        console.log(parseFloat("12.12a34")); //12.12
+        console.log(parseFloat("12")); //12.12
+        console.log(parseFloat("a12.12a34")); //NaN
+
+
     </script>
 </body>
 
