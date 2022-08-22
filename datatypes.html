@@ -40,15 +40,15 @@
         // //請讀出棒球
         // console.log(balls[2]);  //baseball
         let [b1, b2] = balls;
-        console.log(b2);//valleyball
+        // console.log(b2);//valleyball
 
         //object
         //{key:value, key:value, key:value}
         let emp = { "name": "Tom", "age": 30, "isSingle": true };
-        console.log(emp.name);
-        console.log(emp["name"]);
-        //讀出年紀?
-        console.log(emp.age);
+        // console.log(emp.name);
+        // console.log(emp["name"]);
+        // //讀出年紀?
+        // console.log(emp.age);
 
         //JSON
         let employees = [
@@ -64,10 +64,32 @@
         // console.log(employee.skills[2]);
 
         //解構賦值(Destructuring assignment)
-        let { name, age, isSingl } = employees[2];
-        console.log(name)
-        console.log(age)
-        console.log(isSingl) //undefined
+        // let { name, age, isSingl } = employees[2];
+        // console.log(name)
+        // console.log(age)
+        // console.log(isSingl) //undefined
+
+        //typeof
+        // let a;
+        // console.log(typeof a); //undefined
+        // a = 1;
+        // console.log(typeof a); //number
+        // a = "1";
+        // console.log(typeof a); //string
+        // a = true;
+        // console.log(typeof a); //boolean
+        // a = [];
+        // console.log(typeof a); //object
+        // a = {};
+        // console.log(typeof a); //object
+        // a = function () { };
+        // console.log(typeof a);    //function
+
+        // "10" + "10"=>"1010"
+        // 10 + 10 => 20
+        let x = window.prompt("請輸入數字", 10);
+        let y = window.prompt("請輸入數字", 10);
+        console.log(x + y);  //??
     </script>
 </body>
 
