@@ -87,9 +87,14 @@
 
         // "10" + "10"=>"1010"
         // 10 + 10 => 20
-        let x = window.prompt("請輸入數字", 10);
-        let y = window.prompt("請輸入數字", 10);
-        console.log(x + y);  //??
+        // let x = window.prompt("請輸入數字", 10);
+        // let y = window.prompt("請輸入數字", 10);
+        let x = Number(window.prompt("請輸入數字", 10));
+        let y = Number(window.prompt("請輸入數字", 10));
+        console.log(x + y);  //1010
+        // console.log(typeof Number(x));
+        // console.log(typeof parseInt(y, 10));
+        // console.log(Number(x) + parseInt(y, 10));
     </script>
 </body>
 
