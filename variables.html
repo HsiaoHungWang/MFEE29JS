@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label>
+        請輸入美金<input type="text" id="inputText" />
+    </label>
+    <label>
+        請輸入半徑<input type="text" id="inputTextR" />
+    </label>
+    <div id="divTWD"></div>
+    <script>
+
+        //變數 常數   常值 12 "aaa"
+        // console.log(price); //ReferenceError Cannot access 'price' before initialization
+        // let price = 1500;
+
+        let price = undefined;  //系統做的
+        let price1 = null;  //工程師會這樣寫
+
+
+        // console.log(price1);  //undefined
+        // var price1 = 2000;  //var 變數宣告會移到程式碼的最上面，指定值會在原程式碼的位置
+        // console.log(price1);  //2000
+        // var price2;
+        // console.log(price2); //undefined
+
+
+        // console.log(myprice);
+
+
+        const RATE = 30.5;
+        let textUSD = document.getElementById("inputText");
+        let textR = document.getElementById("inputTextR"); //半徑
+        let divTWD = document.getElementById("divTWD");
+        textUSD.addEventListener("blur", function () {
+            let usd = textUSD.value;
+            divTWD.textContent = `台幣： ${usd * RATE}`;
+        })
+        textR.addEventListener("blur", function () {
+            let r = textR.value;
+            const PI = 3.14159;
+            divTWD.textContent = `圓周長： ${2 * PI * r}`;
+        })
+        //2 * 3.14159 * 10 = 62.8318
+
+
+
+
+        // const AGE = window.prompt("請輸入年紀：", 18);
+
+        // let myprice = 2000;
+        // let price = 1500;
+        // let name = "Jack";
+        // let 名子 = "Mary";
+        // console.log(名子);
+        // // console.log(price);
+        // // tax = 1.05;
+        // // console.log(price * tax);
+        // let r = 10;
+        // const PI = 3.1416;
+        // //PI = 3.14159; //uncaught TypeError: Assignment to constant variable
+        // console.log(r * PI);
+
+        //1 * 30.5 = 30.5
+        // 2 * 3.14159 * 10 = 62.8318
+
+    </script>
+</body>
+
+</html>
