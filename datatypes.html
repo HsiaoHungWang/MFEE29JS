@@ -35,10 +35,12 @@
         // document.write("aaaa\tbbbb");
 
         //array
-        // let balls = ["basketball", "valleyball", "baseball", "football"];
+        let balls = ["basketball", "valleyball", "baseball", "football"];
         // console.log(balls[1]);  //valleyball
         // //請讀出棒球
         // console.log(balls[2]);  //baseball
+        let [b1, b2] = balls;
+        console.log(b2);//valleyball
 
         //object
         //{key:value, key:value, key:value}
@@ -46,14 +48,26 @@
         console.log(emp.name);
         console.log(emp["name"]);
         //讀出年紀?
+        console.log(emp.age);
 
-        let emps = [
+        //JSON
+        let employees = [
             { "name": "Tom", "age": 30, "isSingle": true },
             { "name": "Mary", "age": 25, "isSingle": false },
             { "name": "Jack", "age": 28, "isSingle": true }
         ];
         //讀出Jack
+        // console.log(employees[2].name)
+        // console.log(employees[2].age)
+        // console.log(employees[2].isSingle)
+        // let employee = { "name": "Jack", "age": 30, "skills": ["HTML", "CSS", "JavaScript"] };
+        // console.log(employee.skills[2]);
 
+        //解構賦值(Destructuring assignment)
+        let { name, age, isSingl } = employees[2];
+        console.log(name)
+        console.log(age)
+        console.log(isSingl) //undefined
     </script>
 </body>
 
