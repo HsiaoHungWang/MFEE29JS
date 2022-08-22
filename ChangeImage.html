@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img1 {
+            opacity: 0.3;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="img1" src="images/Logoslogan_sm.png" />
+
+    <script>
+        const theImg = document.getElementById("img1");
+        theImg.addEventListener("mouseover", function () {
+            theImg.style.opacity = 1
+        })
+        theImg.addEventListener("mouseout", function () {
+            theImg.style.opacity = 0.3
+        })
+        theImg.addEventListener("click", function () {
+            theImg.src = "images/RainbowLogo.png";
+            // if("圖片是Logoslogan_sm"){
+            //     theImg.src =  "images/RainbowLogo.png";
+            // }else{
+            //     theImg.src =  "images/Logoslogan_sm.png";
+            // }
+        })
+
+
+    </script>
+</body>
+
+</html>
