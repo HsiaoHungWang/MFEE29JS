@@ -55,35 +55,51 @@
 
         //switch
         //console.log(new Date().getDay());  //0日-6六  星期日  星期二
-        let theDay = 6; //new Date().getDay(); //0-6
+        let theDay = 2; //new Date().getDay(); //0-6
         //console.log(typeof theDay); //number
         let aDay = "";
+        // switch (theDay) { //=== "0"
+        //     case 0:
+        //         aDay = "日";
+        //         break;
+        //     case 1:
+        //         aDay = "一";
+        //         break;
+        //     case 2:
+        //         aDay = "二";
+        //         break;
+        //     case 3:
+        //         aDay = "三";
+        //         break;
+        //     case 4:
+        //         aDay = "四";
+        //         break;
+        //     case 5:
+        //         aDay = "五";
+        //         break;
+        //     case 6:
+        //         aDay = "六";
+        //         break;
+        //     default:
+        //         aDay = "不知";
+        // }
         switch (theDay) { //=== "0"
             case 0:
-                aDay = "日";
+            case 6:
+                aDay = "weekend";
                 break;
             case 1:
-                aDay = "一";
-                break;
             case 2:
-                aDay = "二";
-                break;
             case 3:
-                aDay = "三";
-                break;
             case 4:
-                aDay = "四";
-                break;
             case 5:
-                aDay = "五";
+                aDay = "weekday";
                 break;
-            case 6:
-                aDay = "六";
-                break;
+
             default:
                 aDay = "不知";
         }
-        console.log(`今天是星期${aDay}`);
+        console.log(`今天是 ${aDay}`);
 
 
     </script>
