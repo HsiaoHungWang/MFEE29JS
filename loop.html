@@ -19,13 +19,33 @@
         //     //i < 5 會執行這裡的程式碼
         //     console.log(i + "I Love JavaScript!!");
         // }
-        let total = 0;
-        for (let i = 1; i <= 100; i++) {
-            total += i
-        }
-        console.log(`1+2+3+..+99+100=${total}`);
+        // let total = 0;
+        // for (let i = 1; i <= 100; i++) {
+        //     total += i
+        // }
+        // console.log(`1+2+3+..+99+100=${total}`);
 
         //列出1到1000，不能被2整除也不能被3整除的數字
+        //列出1到1000
+        for (let i = 1; i <= 1000; i++) {
+            if (i % 2 !== 0 && i % 3 !== 0) {
+                console.log(i); //奇數，不能被3整除
+            }
+        }
+        //不能被2整除 => 奇數
+        // 3 / 2 = 1.5  4 / 2 餘數是否為0 => 偶數
+        // console.log(3 / 2);
+        // console.log(4 / 2);
+        // console.log(3 % 2);
+        // console.log(4 % 2);
+        // if (3 % 2 !== 0) {
+        //     console.log(3);
+        // }
+        // if (4 % 2 !== 0) {
+        //     console.log(4);
+        // }
+        //不能被3整除
+        //console.log(5 % 3 !== 0);
     </script>
 </body>
 
