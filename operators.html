@@ -72,15 +72,21 @@
 
 
         //條件運算子
-        let age = 19;
-        console.log(age > 18 ? "有投票權" : "還不行投票");
-        age = 15;
-        console.log(age > 18 ? "有投票權" : "還不行投票");
+        // let age = 19;
+        // console.log(age > 18 ? "有投票權" : "還不行投票");
+        // age = 15;
+        // console.log(age > 18 ? "有投票權" : "還不行投票");
 
-        let isLogin = false;
-        console.log(isLogin ? "登出" : "請先登入"); //請先登入
-        isLogin = true;
-        console.log(isLogin ? "登出" : "請先登入"); //登出
+        // let isLogin = false;
+        // console.log(isLogin ? "登出" : "請先登入"); //請先登入
+        // isLogin = true;
+        // console.log(isLogin ? "登出" : "請先登入"); //登出
+
+        //運算子優先順序
+        console.log(3 + 4 - 2); //5
+        console.log(25 < 10 + 3 * 4); //25 < 10 + 12 => 25 < 22 => false
+        console.log(6 / 2 * (1 + 2)); // 6 / 2 * 3 => 3 * 3 => 9
+        console.log(25 < (10 + 3) * 4); // 25 < 13 * 4 => 25 < 52 => true
 
     </script>
 </body>
