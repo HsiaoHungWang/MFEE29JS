@@ -48,13 +48,40 @@
         //console.log(5 % 3 !== 0);
 
         //九九乘法表
-        for (let i = 1; i <= 9; i++) {
-            //console.log(`i=${i}`);
-            for (let j = 1; j <= 9; j++) {
-                //console.log(j);
-                document.write(`${i} * ${j} = ${i * j}`);
+        // for (let i = 1; i <= 9; i++) {
+        //     //console.log(`i=${i}`);
+        //     for (let j = 1; j <= 9; j++) {
+        //         //console.log(j);
+        //         document.write(`${i} * ${j} = ${i * j}`);
+        //     }
+        //     document.write("<br>");
+        // }
+
+        //while
+        // let i = 1;
+        // let total = 0;
+        // while (i <= 100) {
+        //     total += i;
+        //     i++;
+        // }
+        // console.log(`1+2+3+..+99+100=${total}`);
+
+        //continue vs break
+        // for (let i = 5; i > 0; i--) {
+        //     if (i === 3) {
+        //         //continue; //略過這次的執行，執行下一次
+        //         break; //離開迴圈
+        //     }
+        //     console.log(i); //break 5 4  // continue 5 4 2 1
+        // }
+
+        while (true) {
+            let text = window.prompt("輸入 quit 離開", "quit");
+            if (text === "quit") {
+                console.log("再見!!");
+                break;
             }
-            document.write("<br>");
+            console.log(text);
         }
     </script>
 </body>
