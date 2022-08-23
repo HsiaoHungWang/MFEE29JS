@@ -23,8 +23,16 @@
         // console.log("end");
 
         //輸入兩個數字比大小
-        let num1 = window.prompt("輸入數字 1", 0);
-        let num2 = window.prompt("輸入數字 2", 0);
+        let num1 = Number(window.prompt("輸入數字 1", 0)); //"5"  5
+        let num2 = Number(window.prompt("輸入數字 2", 0)); //"30" 30
+        // console.log(typeof num1)
+        if (num1 > num2) {
+            console.log(`${num1} 比較大`)
+        } else {
+            console.log(`${num2} 比較大`)
+        }
+
+        //輸入三個數字比大小
 
     </script>
 </body>
