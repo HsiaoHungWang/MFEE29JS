@@ -24,5 +24,9 @@ BMI≧35：重度肥胖
 - 猜中數字 = 6
 
  ```
- 
+let num = Math.random()
+console.log(num); //0-1之間的值
+console.log(num * 100); //0-1之間的值
+//Math.floor() 無條件捨去
+let guessNum = Math.floor(num * 100); //取整數
  ```
