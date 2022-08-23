@@ -33,6 +33,18 @@
         }
 
         //輸入三個數字比大小
+        let num3 = Number(window.prompt("輸入數字 3", 0));
+        let max = 0;
+        if (num1 > num2) {
+            max = num1;
+        } else {
+            max = num2;
+        }
+        if (max < num3) {
+            max = num3;
+        }
+        console.log(`最大值為 ${max}`);
+
 
     </script>
 </body>
