@@ -63,14 +63,24 @@
         // 夠帥 = true;
         // console.log(夠帥 || "有錢"); //true
 
-        let name = "";  //false
-        //請印出 guest
-        console.log(name || "guest");  //guest
-        name = "Jack";
-        //請印出 Jack
-        console.log(name || "guest");  //Jack
+        // let name = "";  //false
+        // //請印出 guest
+        // console.log(name || "guest");  //guest
+        // name = "Jack";
+        // //請印出 Jack
+        // console.log(name || "guest");  //Jack
 
 
+        //條件運算子
+        let age = 19;
+        console.log(age > 18 ? "有投票權" : "還不行投票");
+        age = 15;
+        console.log(age > 18 ? "有投票權" : "還不行投票");
+
+        let isLogin = false;
+        console.log(isLogin ? "登出" : "請先登入"); //請先登入
+        isLogin = true;
+        console.log(isLogin ? "登出" : "請先登入"); //登出
 
     </script>
 </body>
