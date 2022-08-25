@@ -99,8 +99,25 @@
         // for (let i = 0; i < balls.length; i++) {
         //     console.log(balls[i]);
         // }
-        for (let i = 0, max = balls.length; i < max; i++) {
-            console.log(balls[i]);
+        // for (let i = 0, max = balls.length; i < max; i++) {
+        //     console.log(balls[i]);
+        // }
+
+        let employees = [
+            { "name": "Tom", "age": 30, "isSingle": true },
+            { "name": "Mary", "age": 25, "isSingle": false },
+            { "name": "Jack", "age": 28, "isSingle": true }
+        ];
+
+        for (let i = 0, max = employees.length; i < max; i++) {
+            // console.log(employees[i].name);
+            // console.log(employees[i].age);
+            // console.log(employees[i].isSingle);
+            let { name, age, isSingle } = employees[i];
+            console.log(name);
+            console.log(age);
+            console.log(isSingle);
+
         }
     </script>
 </body>
