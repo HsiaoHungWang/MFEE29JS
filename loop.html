@@ -84,11 +84,24 @@
         //     console.log(text);
         // }
         //Date()、Math
-        let num = Math.random()
-        console.log(num); //0-1之間的值
-        console.log(num * 100); //0-1之間的值
-        //Math.floor() 無條件捨去
-        let guessNum = Math.floor(num * 100); //取整數
+        // let num = Math.random()
+        // console.log(num); //0-1之間的值
+        // console.log(num * 100); //0-1之間的值
+        // //Math.floor() 無條件捨去
+        // let guessNum = Math.floor(num * 100); //取整數
+
+        //array 讀取
+        let balls = ["basketball", "valleyball", "baseball", "football"];
+        // console.log(balls[1]);  //valleyball
+        // //請讀出棒球
+        // console.log(balls[2]);  //baseball
+        //console.log(balls.length);  //4
+        // for (let i = 0; i < balls.length; i++) {
+        //     console.log(balls[i]);
+        // }
+        for (let i = 0, max = balls.length; i < max; i++) {
+            console.log(balls[i]);
+        }
     </script>
 </body>
 
