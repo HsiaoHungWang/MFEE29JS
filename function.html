@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //function的宣告
+        function sayHi(name) {
+            console.log(`Hello ${name}`);
+        }
+
+        //function的呼叫
+        //sayHi("Eric");
+
+        //函式宣告
+        function celsius_to_fahrenheit(degreeC) {
+            let degreeF = degreeC * (9 / 5) + 32;
+            console.log(`攝氏 ${degreeC}℃ 可以轉化成華式 ${degreeF}℉`);
+        }
+        function fahrenheit_to_celsius(degreeF) {
+            let degreeC = (degreeF - 32) * (5 / 9);
+            console.log(`華式 ${degreeF}℉ 可以轉化成攝氏 ${degreeC}℃`);
+        }
+
+        //函式呼叫
+        celsius_to_fahrenheit(30);
+        fahrenheit_to_celsius(86);
+
+
+    </script>
+</body>
+
+</html>

@@ -116,12 +116,13 @@
         //object
         //{key:value, key:value, key:value}
         let emp = { "name": "Tom", "age": 30, "isSingle": true };
-        for (let key in emp) {
-            console.log(key); //name、age、isSingle
-            console.log(emp[key]);// Tom、30、true
-        }
-
-
+        // for (let key in emp) {
+        //     console.log(key); //name、age、isSingle
+        //     console.log(emp[key]);// Tom、30、true
+        // }
+        // console.log(emp.name);
+        // console.log(emp.age);
+        console.log(typeof balls);
         let employees = [
             { "name": "Tom", "age": 30, "isSingle": true },
             { "name": "Mary", "age": 25, "isSingle": false },
@@ -138,6 +139,20 @@
         //     console.log(isSingle);
 
         // }
+
+        for (let emp of employees) {
+            //emp => { "name": "Tom", "age": 30, "isSingle": true }
+            // for (let key in emp) {
+            //     console.log(key); //name、age、isSingle
+            //     console.log(emp[key]);// Tom、30、true
+            // }
+            let { name, age, isSingle } = emp;
+            console.log(name);
+            console.log(age);
+            console.log(isSingle);
+        }
+
+
     </script>
 </body>
 
