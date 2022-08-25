@@ -103,22 +103,41 @@
         //     console.log(balls[i]);
         // }
 
+        //for...of
+        // for (let ball of balls) {
+        //     console.log(ball);
+        // }
+        // //for...in
+        // for (let i in balls) {
+        //     console.log(i);  //0,1,2,3
+        //     console.log(balls[i]);
+        // }
+
+        //object
+        //{key:value, key:value, key:value}
+        let emp = { "name": "Tom", "age": 30, "isSingle": true };
+        for (let key in emp) {
+            console.log(key); //name、age、isSingle
+            console.log(emp[key]);// Tom、30、true
+        }
+
+
         let employees = [
             { "name": "Tom", "age": 30, "isSingle": true },
             { "name": "Mary", "age": 25, "isSingle": false },
             { "name": "Jack", "age": 28, "isSingle": true }
         ];
 
-        for (let i = 0, max = employees.length; i < max; i++) {
-            // console.log(employees[i].name);
-            // console.log(employees[i].age);
-            // console.log(employees[i].isSingle);
-            let { name, age, isSingle } = employees[i];
-            console.log(name);
-            console.log(age);
-            console.log(isSingle);
+        // for (let i = 0, max = employees.length; i < max; i++) {
+        //     // console.log(employees[i].name);
+        //     // console.log(employees[i].age);
+        //     // console.log(employees[i].isSingle);
+        //     let { name, age, isSingle } = employees[i];
+        //     console.log(name);
+        //     console.log(age);
+        //     console.log(isSingle);
 
-        }
+        // }
     </script>
 </body>
 
