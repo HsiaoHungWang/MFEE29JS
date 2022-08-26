@@ -10,17 +10,51 @@
 
 <body>
     <script>
-        function sayHi(name, age) {
-            // console.log(`Hello ${name}`);
-            // console.log(arguments);
-            for (let i = 0, max = arguments.length; i < max; i++) {
-                console.log(arguments[i]);
-            }
+        // function sayHi(name, age) {
+        //     // console.log(`Hello ${name}`);
+        //     // console.log(arguments);
+        //     for (let i = 0, max = arguments.length; i < max; i++) {
+        //         console.log(arguments[i]);
+        //     }
+        // }
+        // sayHi();        //Hello undefined
+        // sayHi("Eric");  //Hello Eric
+        // sayHi("Tom", 30); //Hello Tom
+        // sayHi("Tom", 30, "Tom@company.com"); //Hello Tom
+
+        //預設參數
+        // function getSum(num2, num1 = 1) {
+        //     console.log(num1);
+        //     console.log(num2);
+        //     console.log(num1 + num2);
+        // }
+
+        // // getSum();
+        // getSum(3);
+        // getSum(3, 5);
+
+        //其餘運算子（rest operator）
+        // function getSum(a, b, ...vals) {
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(vals);
+        //     let sum = 0;
+        //     for (let i = 0, max = vals.length; i < max; i++) {
+        //         sum += vals[i];
+        //     }
+        //     console.log(sum);
+        // }
+
+        // getSum(1, 2, 3);
+        // getSum(1, 2, 3, 4);
+
+        //具名參數
+        function user({ name, email, age }) {
+            console.log(name, age, email);
         }
-        sayHi();        //Hello undefined
-        sayHi("Eric");  //Hello Eric
-        sayHi("Tom", 30); //Hello Tom
-        sayHi("Tom", 30, "Tom@company.com"); //Hello Tom
+
+        user({ "name": "Mary", "age": 30, "email": "mary@company.com" });
+
     </script>
 </body>
 
