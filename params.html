@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sayHi(name, age) {
+            // console.log(`Hello ${name}`);
+            // console.log(arguments);
+            for (let i = 0, max = arguments.length; i < max; i++) {
+                console.log(arguments[i]);
+            }
+        }
+        sayHi();        //Hello undefined
+        sayHi("Eric");  //Hello Eric
+        sayHi("Tom", 30); //Hello Tom
+        sayHi("Tom", 30, "Tom@company.com"); //Hello Tom
+    </script>
+</body>
+
+</html>
