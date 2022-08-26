@@ -11,21 +11,83 @@
 <body>
     <script>
         //IIFE
-        (function () {
-            console.log("Hello");
-        })();
-        (function (name) {
-            let age = 100;
-            console.log(`Hello ${name}`);
-        }("Mary"));
+        // (function () {
+        //     console.log("Hello");
+        // })();
+        // (function (name) {
+        //     let age = 100;
+        //     console.log(`Hello ${name}`);
+        // }("Mary"));
 
-        console.log(age);
+        //console.log(age);
         // function sayHi() {
         //     let name = "eric";
         //     console.log(name);
         // }
 
         // sayHi();
+
+        //遞迴函式
+        // function factorial(n) {
+        //     if (n != 0) {
+        //         return (n * factorial(n - 1));
+        //     }
+        //     return 1;
+        // }
+        // console.log(factorial(4)); //4*3*2*1
+        // console.log(factorial(3)); //3*2*1
+
+
+        //回呼 callback function
+        // function fun1(cb) {
+        //     window.setTimeout(function () {
+        //         console.log("fun1");
+        //         cb(fun3); //fun2()
+        //     }, 3000);
+
+        //     //檔案讀(FileReader)寫(x) => 效能不好
+        //     //透過Internet去要資料
+        //     //yahoo
+        // }
+        // function fun2(cb) {
+        //     window.setTimeout(function () {
+        //         console.log("fun2");
+        //         cb();
+        //     }, 2000);
+        // }
+        // function fun3() {
+        //     window.setTimeout(function () {
+        //         console.log("fun3");
+        //     }, 1000);
+        // }
+
+        // //fun1 > fun2 > fun3
+        // fun1(fun2);  //呼叫fun1，fun1完成後回來呼叫(回呼callback)fun2
+        // // fun2();
+        // // fun3();
+
+        function fun1() {
+            console.log("登入成功相關事宜")
+        }
+        function fun2() {
+            console.log("尚未登入相關事宜")
+        }
+
+        function fun(f1, f2) {
+            let isLogin = false;
+            if (isLogin) {
+                f1();
+            } else {
+                f2();
+            }
+        }
+
+        fun(fun1, fun2);
+        window.setTimeout(cbF, 1000);
+        function cbF() {
+            console.log("fun...");
+        }
+
     </script>
 </body>
 

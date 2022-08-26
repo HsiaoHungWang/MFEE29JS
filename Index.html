@@ -28,7 +28,7 @@
         // console.log(checkEmpty(" "));    //false
         const inpName = document.getElementById("inputName");
         const btn = document.getElementById("button1");
-        btn.addEventListener("click", function () {
+        function cb() {
             let name = inpName.value;
 
 
@@ -46,7 +46,8 @@
             // } else {
             //     alert(`Hello ${name}`);
             // }
-        })
+        }
+        btn.addEventListener("click", cb);
 
 
 
