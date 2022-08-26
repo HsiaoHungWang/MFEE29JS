@@ -22,16 +22,30 @@
     <h1 id="myH"></h1>
     <div id="myDiv"></div>
     <input type="text" id="inputName"><input type="button" value="click" id="button1">
+    <script src="scripts/validation.js"></script>
     <script>
+        // console.log(checkEmpty("abc"));  //true
+        // console.log(checkEmpty(" "));    //false
         const inpName = document.getElementById("inputName");
         const btn = document.getElementById("button1");
         btn.addEventListener("click", function () {
             let name = inpName.value;
-            if (name === "") {
-                alert("請輸入姓名");
-            } else {
+
+
+            if (checkEmpty(name)) {
                 alert(`Hello ${name}`);
+            } else {
+                alert("請輸入姓名");
             }
+
+
+            // // console.log(name.length);
+            // // console.log(name.length !== 0);
+            // if (name === "" || name.length === 0) {
+            //     alert("請輸入姓名");
+            // } else {
+            //     alert(`Hello ${name}`);
+            // }
         })
 
 
