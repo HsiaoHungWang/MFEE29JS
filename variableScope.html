@@ -38,18 +38,29 @@ let 是區塊作用域(block scope)
         //用 var、let 宣告在 function 之外就叫做廣域變數
         var name = "Tom";
         let age = 30;
+        const age1 = 31;
 
         function sayHi() {
             var email = "abc@company.com";  //宣告在function叫做區域變數
             let isLogin = true;
+            let data1 = "datalet";
+            const data = "data";
             if (isLogin) {
                 let x = "xyz";
                 var z = "zzz";
+                const y = "yyy";
+                const data = "aaaa";
+                console.log(data);
+                let data1 = "datalet1";
+                console.log(data1);
             }
+            console.log(data);
+            console.log(data1);
             console.log(name); //Tom
             console.log(age);  //30
             // console.log(x); //Uncaught ReferenceError: x is not defined
             console.log(z); //zzz
+            // console.log(y);
         }
         //沒有辦法讀取區域變數
         //console.log(email); //Uncaught ReferenceError: email is not defined
