@@ -9,6 +9,11 @@
 </head>
 
 <body>
+    <button>click1</button>
+    <button>click2</button>
+    <button>click3</button>
+    <button>click4</button>
+    <button>click5</button>
     <script>
         //IIFE
         // (function () {
@@ -66,27 +71,81 @@
         // // fun2();
         // // fun3();
 
-        function fun1() {
-            console.log("登入成功相關事宜")
-        }
-        function fun2() {
-            console.log("尚未登入相關事宜")
+        // function fun1() {
+        //     console.log("登入成功相關事宜")
+        // }
+        // function fun2() {
+        //     console.log("尚未登入相關事宜")
+        // }
+
+        // function fun(f1, f2) {
+        //     let isLogin = false;
+        //     if (isLogin) {
+        //         f1();
+        //     } else {
+        //         f2();
+        //     }
+        // }
+
+        // fun(fun1, fun2);
+        // window.setTimeout(cbF, 1000);
+        // function cbF() {
+        //     console.log("fun...");
+        // }
+
+        // for (var i = 0; i < 5; i++) {
+        //     //  console.log(i); //0 1 2 3 4
+        //     //  i = 5
+        //     window.setTimeout(function () {
+        //         console.log(i); //?? 5 5 5 5 5
+        //     }, 1000);
+        // }
+        // for (let i = 0; i < 5; i++) {
+        //     //  console.log(i); //0 1 2 3 4
+        //     //  i = 5
+        //     window.setTimeout(function () {
+        //         console.log(i); // 0 1 2 3 4
+        //     }, 1000);
+        // }
+
+
+        // for (var i = 0; i < 5; i++) {
+        //     //  console.log(i); //0 1 2 3 4
+        //     //  i = 5
+        //     (function (x) {
+        //         window.setTimeout(function () {
+        //             console.log(x); //0 1 2 3 4
+        //         }, 1000);
+        //     })(i);
+
+        // }
+
+        // function f() {
+        //     var a = 1;  //區域變數
+        //     var b = function () {
+        //         a = 3;
+        //         console.log(a);
+        //     }
+        //     return b;
+        // }
+
+        // var c = f(); //b()
+        // c();
+
+        //getElementById("id名稱")
+        let btns = document.getElementsByTagName("button");
+        for (var i = 0, max = btns.length; i < max; i++) {
+            //i=5
+            (function (x) {
+                btns[i].addEventListener("click", function (evt) {
+                    console.log(evt.target.textContent);
+                    console.log(x); //0 1 2 3 4
+                })
+
+            })(i)
+
         }
 
-        function fun(f1, f2) {
-            let isLogin = false;
-            if (isLogin) {
-                f1();
-            } else {
-                f2();
-            }
-        }
-
-        fun(fun1, fun2);
-        window.setTimeout(cbF, 1000);
-        function cbF() {
-            console.log("fun...");
-        }
 
     </script>
 </body>
