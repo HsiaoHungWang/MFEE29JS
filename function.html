@@ -43,7 +43,7 @@
         // let b = 456;
 
         // celsius_to_fahrenheit(30);
-        fahrenheit_to_celsius(86);
+        //fahrenheit_to_celsius(86);
         //Uncaught ReferenceError: Cannot access 'fahrenheit_to_celsius' before initialization
 
         // //函式宣告
@@ -58,7 +58,20 @@
             console.log(`華式 ${degreeF}℉ 可以轉化成攝氏 ${degreeC}℃`);
         }
         //函式呼叫
-        //
+
+
+        //箭頭函式 arrow function
+        const area = function (w, h) {
+            return w * h;
+        }
+        const doSomething = function (job) {
+            return `do you ${job}`;
+        }
+
+
+
+        console.log(area(10, 30));
+        console.log(doSomething("study"));
 
         // //函式呼叫
         // celsius_to_fahrenheit(30);
