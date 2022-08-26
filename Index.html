@@ -21,8 +21,22 @@
 <body>
     <h1 id="myH"></h1>
     <div id="myDiv"></div>
-
+    <input type="text" id="inputName"><input type="button" value="click" id="button1">
     <script>
+        const inpName = document.getElementById("inputName");
+        const btn = document.getElementById("button1");
+        btn.addEventListener("click", function () {
+            let name = inpName.value;
+            if (name === "") {
+                alert("請輸入姓名");
+            } else {
+                alert(`Hello ${name}`);
+            }
+        })
+
+
+
+
         // // console.log("Hello Log!!");
         // const theDiv = document.getElementById("myDiv");
         // // theDiv.innerText = "Hello World!!";
