@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="empUl"></ul>
+    <script>
+        let emps = [{ "name": "Tom", "workYears": 3, "salary": 35000 },
+        { "name": "Jack", "workYears": 5, "salary": 40000 },
+        { "name": "Mary", "workYears": 7, "salary": 45000 }];
+
+        let datas = emps.map((emp, index, array) => {
+            let { name, workYears, salary } = emp;
+            return (
+                `<li>${name} - ${salary}</li>`
+            )
+        })
+        // console.log(datas.join(""));
+        document.getElementById("empUl").innerHTML = datas.join("");
+    </script>
+</body>
+
+</html>
