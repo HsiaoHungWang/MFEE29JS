@@ -32,16 +32,29 @@
         // console.log(str.substr(4, 6)); //Script
         // console.log(str.substring(4, 6));//Sc(不包含6)
         // console.log(str.substring(4, 10));//Script(不包含6)
+        //csv a,b,c,d
+        // let jQuerySlogn = "write less do more";
+        // let slogns = jQuerySlogn.split(" ");
+        // console.log(slogns);
 
         let strMail = "abc@company.com.tw";
         //@
         //.
         //檢查電子郵件是否正確
-        if (checkMail(strMail)) {
-            window.alert("Email格式正確");
-        } else {
-            window.alert("Email格式不正確");
-        }
+        // if (checkMail(strMail)) {
+        //     window.alert("Email格式正確");
+        // } else {
+        //     window.alert("Email格式不正確");
+        // }
+
+        //Date Object
+        let today = new Date();
+        const DAYS = ["日", "一", "二"];
+        console.log(today);
+        console.log(today.getTime());
+        console.log(today.getMonth() + 1);  //8月
+        console.log(`星期${DAYS[today.getDay()]}`);  //1 => 一  0-6
+
     </script>
 </body>
 
