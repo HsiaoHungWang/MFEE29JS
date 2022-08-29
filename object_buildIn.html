@@ -10,6 +10,7 @@
 
 <body>
     <script src="scripts/validation.js"></script>
+    <script src="scripts/main.js"></script>
     <script>
 
         // //isNaN is not a Number 不是數值
@@ -49,12 +50,15 @@
 
         //Date Object
         let today = new Date();
-        const DAYS = ["日", "一", "二"];
-        console.log(today);
-        console.log(today.getTime());
-        console.log(today.getMonth() + 1);  //8月
-        console.log(`星期${DAYS[today.getDay()]}`);  //1 => 一  0-6
+        // const DAYS = ["日", "一", "二"];
+        // console.log(today);
+        // console.log(today.getTime());
+        // console.log(today.getMonth() + 1);  //8月
+        // console.log(`星期${DAYS[today.getDay()]}`);  //1 => 一  0-6
 
+
+        //計算年紀
+        console.log(calcAge("2000/1/1"));
     </script>
 </body>
 
