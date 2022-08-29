@@ -70,10 +70,51 @@
 
         var re = /^[a-z]{1}[1-2]{1}\d{8}$/;
 
-        console.log(re.test("a123456789"));
-        console.log(re.test("a323456789"));
-        console.log(re.test("1a23456789"));
-        console.log(re.test("x223456789"));
+        // console.log(re.test("a123456789"));
+        // console.log(re.test("a323456789"));
+        // console.log(re.test("1a23456789"));
+        // console.log(re.test("x223456789"));
+
+        // let email = "wang@ispan.com.tw";
+        // if (checkMailByRegExp(email)) {
+        //     alert("電子郵件格式正確")
+        // } else {
+        //     alert("電子郵件格式不正確")
+        // }
+
+        //pattern 來自 https://regexlib.com/RETester.aspx?regexp_id=390
+
+        var reDate = /^((\d{2}(([02468][048])|([13579][26]))[\-\/\s]?((((0?[13578])|(1[02]))[\-\/\s]?((0?[1-9])|([1-2][0-9])|(3[01])))|(((0?[469])|(11))[\-\/\s]?((0?[1-9])|([1-2][0-9])|(30)))|(0?2[\-\/\s]?((0?[1-9])|([1-2][0-9])))))|(\d{2}(([02468][1235679])|([13579][01345789]))[\-\/\s]?((((0?[13578])|(1[02]))[\-\/\s]?((0?[1-9])|([1-2][0-9])|(3[01])))|(((0?[469])|(11))[\-\/\s]?((0?[1-9])|([1-2][0-9])|(30)))|(0?2[\-\/\s]?((0?[1-9])|(1[0-9])|(2[0-8]))))))(\s(((0?[1-9])|(1[0-2]))\:([0-5][0-9])((\s)|(\:([0-5][0-9])\s))([AM|PM|am|pm]{2,2})))?$/;
+
+        // console.log(reDate.test("2022/8/29"))
+        // console.log(reDate.test("2022/8/32")) //有驗證大月
+        // console.log(reDate.test("2022/2/29")) //有驗證閏年
+        // console.log(reDate.test("2022/6/31")) //有驗證小月
+        // console.log(reDate.test("2022/13/29"))//有驗證超過12月
+
+        //Array
+
+        let arr1 = ["a", "b", "c", "d"];
+        let arr2 = ["x", "y", "z"];
+        console.log(arr1.length); //4        
+        console.log(arr1);
+        // delete arr1[1];
+        // console.log(arr1.toString()); //a,,c,d
+        // console.log(arr1.join("-"));  //a--c-d
+        // console.log(arr1.reverse().join("_"));  //d_c__a
+        arr1.push("e");
+        console.log(arr1);
+        arr1.pop();
+        console.log(arr1);
+        arr1.unshift("e");
+        console.log(arr1);
+        arr1.shift();
+        console.log(arr1);
+        console.log(arr1.indexOf("b")); //1
+        console.log(arr1.slice(1, 3)); //["b","c"]
+        let arr3 = arr1.concat(arr2);
+        console.log(arr3);
+
 
     </script>
 </body>

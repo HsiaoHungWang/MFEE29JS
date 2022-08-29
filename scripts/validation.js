@@ -20,6 +20,10 @@ function checkMail(mail) {
 }
 
 function checkMailByRegExp(mail) {
-
-
+    let isValid = false;
+    let re = /^.+@.+\..{2,3}$/;
+    if (re.test(mail)) {
+        isValid = true;
+    }
+    return isValid;
 }
