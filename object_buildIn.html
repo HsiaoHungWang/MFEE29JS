@@ -11,14 +11,31 @@
 <body>
     <script>
 
-        //isNaN is not a Number 不是數值
-        console.log(isNaN("abcd")); //true
-        console.log(isNaN("12")); //false
-        let strUrl = "https://www.ispan.com.tw/?search=前端工程師&key=value&%@#$value";
+        // //isNaN is not a Number 不是數值
+        // console.log(isNaN("abcd")); //true
+        // console.log(isNaN("12")); //false
+        // let strUrl = "https://www.ispan.com.tw/?search=前端工程師&key=value&%@#$value";
 
-        console.log(encodeURI(strUrl));
-        console.log(encodeURIComponent(strUrl));
-        console.log(decodeURIComponent("https%3A%2F%2Fwww.ispan.com.tw%2F%3Fsearch%3D%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%26key%3Dvalue%26%25%40%23%24value"));
+        // console.log(encodeURI(strUrl));
+        // console.log(encodeURIComponent(strUrl));
+        // console.log(decodeURIComponent("https%3A%2F%2Fwww.ispan.com.tw%2F%3Fsearch%3D%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%26key%3Dvalue%26%25%40%23%24value"));
+
+        //string object
+        //let str = new String("JavaScript");  
+        // let str = "JavaScript";  //[0:"J",1:"a",2:"v"....] 
+        // console.log(str.charAt(4)); //S
+        // console.log(str.indexOf("a")); //1
+        // console.log(str.lastIndexOf("a")); //3
+        // console.log(str.indexOf("V")); //? -1
+        // console.log(str.indexOf("Script")); //4
+        // console.log(str.substr(4, 6)); //Script
+        // console.log(str.substring(4, 6));//Sc(不包含6)
+        // console.log(str.substring(4, 10));//Script(不包含6)
+
+        let strMail = ".@abc@company.com.tw@.";
+        //@
+        //.
+         //檢查電子郵件是否正確
 
     </script>
 </body>
