@@ -15,7 +15,7 @@ var 變數可以重複設定，let 不行
 var 有變數提升(hoisting)的效果，let 沒有
 有效範圍不同
 var 是函式作用域(function scope)
-let 是區塊作用域(block scope)
+let 是區塊作用域(block scope){ }
 
     -->
     <script>
@@ -67,17 +67,27 @@ let 是區塊作用域(block scope)
         //console.log(isLogin);//Uncaught ReferenceError: email is not defined
         sayHi();
 
+        // if (true) {
+        //     var a = "123";
+        //     let b = "456";
+        //     let age = 40;
+        //     console.log(age);  //40
+        // }
+
+        // // console.log(a);
+        // // console.log(b);
+        // console.log(age); //30
+
+        let age2 = 30;
+
         if (true) {
-            var a = "123";
-            let b = "456";
-            let age = 40;
+            //age2 is not defined     undefined         
+            console.log(age2); //30  //加上這一行上面的程式就會出錯??? uncaught ReferenceError: Cannot access 'age2' before initialization
+            //let age2 = 40;  //temporal dead zone
+
             console.log(age);  //40
         }
-
-        // console.log(a);
-        // console.log(b);
-        console.log(age); //30
-
+        console.log(age2)
     </script>
 </body>
 

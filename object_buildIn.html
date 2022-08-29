@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //isNaN is not a Number 不是數值
+        console.log(isNaN("abcd")); //true
+        console.log(isNaN("12")); //false
+        let strUrl = "https://www.ispan.com.tw/?search=前端工程師&key=value&%@#$value";
+
+        console.log(encodeURI(strUrl));
+        console.log(encodeURIComponent(strUrl));
+        console.log(decodeURIComponent("https%3A%2F%2Fwww.ispan.com.tw%2F%3Fsearch%3D%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%26key%3Dvalue%26%25%40%23%24value"));
+
+    </script>
+</body>
+
+</html>
