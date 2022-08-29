@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="event binding1" onclick="show()">
+    <input type="button" value="event binding2" id="button2">
+    <input type="button" value="event binding3" id="button3">
+    <script>
+        document.getElementById("button2").onclick = show;
+        document.getElementById("button3").addEventListener("click", show);
+        function show() {
+            alert("Hello Event!!");
+        }
+    </script>
+</body>
+
+</html>
