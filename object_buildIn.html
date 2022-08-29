@@ -49,7 +49,7 @@
         // }
 
         //Date Object
-        let today = new Date();
+        //let today = new Date();
         // const DAYS = ["日", "一", "二"];
         // console.log(today);
         // console.log(today.getTime());
@@ -58,7 +58,23 @@
 
 
         //計算年紀
-        console.log(calcAge("2000/1/1"));
+        //console.log(calcAge("2000/1/1"));
+
+
+        //regex object
+        //let re = new RegExp("a", "gi");
+        // let re = /a/gi;
+        // let str = "JavaScript JAVA";
+        //let result = str.match(re);
+        //console.log(result); //a
+
+        var re = /^[a-z]{1}[1-2]{1}\d{8}$/;
+
+        console.log(re.test("a123456789"));
+        console.log(re.test("a323456789"));
+        console.log(re.test("1a23456789"));
+        console.log(re.test("x223456789"));
+
     </script>
 </body>
 

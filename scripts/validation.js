@@ -18,3 +18,8 @@ function checkMail(mail) {
     }
     return isValid;
 }
+
+function checkMailByRegExp(mail) {
+
+
+}
