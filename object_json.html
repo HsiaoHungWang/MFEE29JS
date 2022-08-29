@@ -12,10 +12,17 @@
     <ul id="empUl"></ul>
     <script>
         let emps = [{ "name": "Tom", "workYears": 3, "salary": 35000 },
-        { "name": "Jack", "workYears": 5, "salary": 40000 },
-        { "name": "Mary", "workYears": 7, "salary": 45000 }];
+        { "name": "Jack", "workYears": 5, "salary": 45000 },
+        { "name": "Fiona", "workYears": 3, "salary": 37000 },
+        { "name": "Mary", "workYears": 7, "salary": 40000 }];
 
-        let datas = emps.map((emp, index, array) => {
+        //排序
+        emps.sort((e1, e2) => e1.workYears - e2.workYears);
+        //讀出年資超過5年的
+        let filterDatas = emps.filter((emp, index, array) => emp.workYears >= 5);
+        console.log(filterDatas);
+
+        let datas = filterDatas.map((emp, index, array) => {
             let { name, workYears, salary } = emp;
             return (
                 `<li>${name} - ${salary}</li>`
