@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <script src="scripts/validation.js"></script>
     <script>
 
         // //isNaN is not a Number 不是數值
@@ -32,11 +33,15 @@
         // console.log(str.substring(4, 6));//Sc(不包含6)
         // console.log(str.substring(4, 10));//Script(不包含6)
 
-        let strMail = ".@abc@company.com.tw@.";
+        let strMail = "abc@company.com.tw";
         //@
         //.
-         //檢查電子郵件是否正確
-
+        //檢查電子郵件是否正確
+        if (checkMail(strMail)) {
+            window.alert("Email格式正確");
+        } else {
+            window.alert("Email格式不正確");
+        }
     </script>
 </body>
 
