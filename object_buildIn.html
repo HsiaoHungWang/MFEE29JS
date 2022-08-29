@@ -124,13 +124,14 @@
         console.log(evenDatas); //[a,c,b,e]
 
 
-        let uniqeDatas = arr1.filter(function (value, index, array) {
-            return index === array.indexOf(value);
-        })
+        // let uniqeDatas = arr1.filter(function (value, index, array) {
+        //     return index === array.indexOf(value);
+        // })
+        let uniqeDatas = arr1.filter((value, index, array) => index === array.indexOf(value));
         console.log(uniqeDatas);
-  // 0  === a(0)
-  //1   === b(1)
-  //4  === b(1) false
+        // 0  === a(0)
+        //1   === b(1)
+        //4  === b(1) false
 
     </script>
 </body>
