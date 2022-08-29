@@ -94,27 +94,43 @@
 
         //Array
 
-        let arr1 = ["a", "b", "c", "d"];
+        let arr1 = ["a", "b", "c", "d", "b", "c", "e"];
         let arr2 = ["x", "y", "z"];
-        console.log(arr1.length); //4        
-        console.log(arr1);
-        // delete arr1[1];
-        // console.log(arr1.toString()); //a,,c,d
-        // console.log(arr1.join("-"));  //a--c-d
-        // console.log(arr1.reverse().join("_"));  //d_c__a
-        arr1.push("e");
-        console.log(arr1);
-        arr1.pop();
-        console.log(arr1);
-        arr1.unshift("e");
-        console.log(arr1);
-        arr1.shift();
-        console.log(arr1);
-        console.log(arr1.indexOf("b")); //1
-        console.log(arr1.slice(1, 3)); //["b","c"]
-        let arr3 = arr1.concat(arr2);
-        console.log(arr3);
+        // console.log(arr1.length); //4
+        // console.log(arr1);
+        // // delete arr1[1];
+        // // console.log(arr1.toString()); //a,,c,d
+        // // console.log(arr1.join("-"));  //a--c-d
+        // // console.log(arr1.reverse().join("_"));  //d_c__a
+        // arr1.push("e");
+        // console.log(arr1);
+        // arr1.pop();
+        // console.log(arr1);
+        // arr1.unshift("e");
+        // console.log(arr1);
+        // arr1.shift();
+        // console.log(arr1);
+        // console.log(arr1.indexOf("b")); //1
+        // console.log(arr1.slice(1, 3)); //["b","c"]
+        // let arr3 = arr1.concat(arr2);
+        // console.log(arr3);
 
+        // arr2.forEach(function (value, index, array) {
+        //     console.log(index, value);
+        //     //console.log(array);
+        // })
+        //arr2.forEach((value, index, array) => console.log(index, value));
+        let evenDatas = arr1.filter((value, index, array) => index % 2 === 0);
+        console.log(evenDatas); //[a,c,b,e]
+
+
+        let uniqeDatas = arr1.filter(function (value, index, array) {
+            return index === array.indexOf(value);
+        })
+        console.log(uniqeDatas);
+  // 0  === a(0)
+  //1   === b(1)
+  //4  === b(1) false
 
     </script>
 </body>
