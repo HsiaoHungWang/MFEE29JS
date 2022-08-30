@@ -20,6 +20,10 @@
 </head>
 
 <body>
+    <input type="text" id="text1" placeholder="keypress">
+    <input type="text" id="text2" placeholder="keydown">
+    <input type="text" id="text3" placeholder="keyup">
+    <hr />
     <div class="note"></div>
     <script>
         //document.querySelector("css selectors")
@@ -27,6 +31,30 @@
         //let divs = document.getElementsByClassName("note"); //回傳的是多筆資料集合[div] [0]
         //let divs = document.querySelectorAll(".note")
         //console.log(divs)
+        let t1 = document.querySelector("#text1");
+        let t2 = document.querySelector("#text2");
+        let t3 = document.querySelector("#text3");
+
+        t1.addEventListener("keypress", event => {
+            //a-z 97-122
+            //A-Z 65-90
+            //0-9 48-57
+            console.log(event);
+            console.log(event.which);
+        })
+        t2.addEventListener("keydown", event => {
+            //無法分辨大小寫 65-90
+            //shift、alt、ctrl  鍵盤功能鍵
+            // console.log(event);
+            console.log(event.which);
+        })
+
+        t3.addEventListener("keyup", event => {
+            //無法分辨大小寫 65-90
+            //shift、alt、ctrl 
+            // console.log(event);
+            console.log(event.which);
+        })
         let divNote = document.querySelector(".note");
         let flag;
         let startX;
