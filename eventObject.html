@@ -24,12 +24,37 @@
     <script>
         //document.querySelector("css selectors")
         //document.querySelectorAll("css selectors")
-        // document.getElementsByClassName("className") //回傳的是多筆資料集合[div] [0]
+        //let divs = document.getElementsByClassName("note"); //回傳的是多筆資料集合[div] [0]
+        //let divs = document.querySelectorAll(".note")
+        //console.log(divs)
         let divNote = document.querySelector(".note");
-        divNote.addEventListener("mousedown", (event) => {
+        // console.log(divNote)
+        document.addEventListener("contextmenu", event => event.preventDefault()); //preventDefault() 停止預設行為
+        document.addEventListener("mousedown", event => {
             //a => event object
             console.log(event)
+            // //事件對象
+            // console.log(event.target);
+            // console.log(event.currentTarget);
+            // //事件類型
+            // console.log(event.type);
+
+            switch (event.button) {
+                case 0:
+                    console.log("左鍵");
+                    break;
+                case 1:
+                    console.log("滾輪");
+                    break;
+                case 2:
+                    console.log("右鍵");
+                    break;
+            }
         })
+        // divs[0].addEventListener("mousedown", (event) => {
+        //     //a => event object
+        //     console.log(event)
+        // })
     </script>
 </body>
 
