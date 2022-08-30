@@ -13,8 +13,8 @@
             background-color: lightblue;
             cursor: pointer;
             position: absolute;
-            /* top: 400px;
-            left: 300px; */
+            top: 400px;
+            left: 300px;
         }
     </style>
 </head>
@@ -30,7 +30,7 @@
         let divNote = document.querySelector(".note");
         // console.log(divNote)
         document.addEventListener("contextmenu", event => event.preventDefault()); //preventDefault() 停止預設行為
-        document.addEventListener("mousedown", event => {
+        divNote.addEventListener("mousedown", event => {
             //a => event object
             console.log(event)
             // //事件對象
@@ -39,17 +39,22 @@
             // //事件類型
             // console.log(event.type);
 
-            switch (event.button) {
-                case 0:
-                    console.log("左鍵");
-                    break;
-                case 1:
-                    console.log("滾輪");
-                    break;
-                case 2:
-                    console.log("右鍵");
-                    break;
-            }
+            // switch (event.button) {
+            //     case 0:
+            //         console.log("左鍵");
+            //         break;
+            //     case 1:
+            //         console.log("滾輪");
+            //         break;
+            //     case 2:
+            //         console.log("右鍵");
+            //         break;
+            // }
+
+            console.log(event.screenX, event.screenY); //螢幕的左上角當成 0,0
+            console.log(event.clientX, event.clientY); //瀏覽器視窗的左上角當成 0,0
+            console.log(event.offsetX, event.offsetY); //事件對象的左上角當成 0, 0
+            // console.log(event.target.offsetLeft, event.target.offsetTop); //事件對象的左上角的位置
         })
         // divs[0].addEventListener("mousedown", (event) => {
         //     //a => event object
