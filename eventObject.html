@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .note {
+            width: 180px;
+            height: 180px;
+            background-color: lightblue;
+            cursor: pointer;
+            position: absolute;
+            /* top: 400px;
+            left: 300px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="note"></div>
+    <script>
+        //document.querySelector("css selectors")
+        //document.querySelectorAll("css selectors")
+        // document.getElementsByClassName("className") //回傳的是多筆資料集合[div] [0]
+        let divNote = document.querySelector(".note");
+        divNote.addEventListener("mousedown", (event) => {
+            //a => event object
+            console.log(event)
+        })
+    </script>
+</body>
+
+</html>
