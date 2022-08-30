@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="selectCity"></select>
+    <select id="selectArea"></select>
+    <script src="datas/address.js"></script>
+    <script>
+        let selCity = document.querySelector("#selectCity");
+        let selArea = document.querySelector("#selectArea");
+        // selCity[0] = new Option("Item1", "a");
+        // selCity[1] = new Option("Item2", "b");
+        // selCity[2] = new Option("Item3", "c");
+        // selCity[2] = new Option("Item3", "c");
+        // selCity[2] = new Option("Item3", "c");
+        // selCity[2] = new Option("Item3", "c");
+        // selCity[23] = new Option("Item24", "c");
+        //[0:{},1:{},2:{},{}.... 24{}]
+        console.log(ADDRESS.length);
+        //讀出CityName放進selectCity的標籤中
+        ADDRESS.forEach((city, index, array) => {
+            let { CityName } = city;
+            //city => {}
+            //index => 0,1,2,3
+            //array => array
+            // console.log(city.CityName);
+            // console.log(city.CityEngName);
+            // if (city.CityName === "臺南市") {
+            //     console.log(city.AreaList);
+            // }
+            //console.log(index);//0 1, 2
+            selCity[index] = new Option(CityName, CityName);
+        })
+
+        selCity.addEventListener("change", () => {
+            let city = selCity.options[selCity.selectedIndex].value;
+            //要根據選取的城市讀出相對應的鄉鎮區的資料
+            console.log(city);
+            let areas = ADDRESS.filter((cities, index, array) => {
+                // console.log(city)
+
+                return cities.CityName === city;
+            })
+            // console.log(areas);
+            // console.log(areas[0]);
+            // console.log(areas[0].AreaList);
+
+            //讀出AreaList的ZipCode、AreaName放進selectArea的標籤中
+            areas[0].AreaList.forEach((area, index, array) => {
+                let { AreaName, ZipCode } = area;
+                selArea[index] = new Option(AreaName, ZipCode);
+            })
+        })
+    </script>
+</body>
+
+</html>
