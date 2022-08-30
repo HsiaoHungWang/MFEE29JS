@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 500px;
+            height: 500px;
+            background-color: lightgreen;
+        }
+
+        #div2 {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        #p1 {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <div id="div2">
+            <p id="p1">PPPPPPPPPPPPPPP</p>
+        </div>
+    </div>
+    <script>
+        //false => event bubbling
+        //true => event capturing
+        document.querySelector("#div1").addEventListener("click", event => {
+            event.stopPropagation(); //停止事件氣泡現象
+            console.log(event.target, event.currentTarget)
+        }, false)
+        document.querySelector("#div2").addEventListener("click", event => {
+            event.stopPropagation(); //停止事件氣泡現象
+            console.log(event.target, event.currentTarget)
+        }, false)
+        document.querySelector("#p1").addEventListener("click", event => {
+            console.log(event.target, event.currentTarget)
+            event.stopPropagation(); //停止事件氣泡現象
+        }, false)
+
+        // let sayHi = function (name) {
+        //     return `HEllO ${name}`;
+        // }
+        //goes to arrow function
+        // let sayHi = (name) => {
+        //     return `HEllO ${name}`;
+        // }
+
+        // let sayHi = name => {
+            //...
+            //...
+        //     return `HEllO ${name}`;
+        // }
+
+        //let sayHi = name => `HEllO ${name}`;
+
+
+        //console.log(sayHi("XYZ"));
+    </script>
+</body>
+
+</html>
