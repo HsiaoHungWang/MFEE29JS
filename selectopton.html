@@ -10,11 +10,16 @@
 
 <body>
     <select id="select1">
-        <option value="1">Item1</option>
-        <option value="2">Item2</option>
+        <!-- <option value="1">Item1</option>
+        <option value="2">Item2</option> -->
     </select>
 
+    <script src="datas/address.js"></script>
     <script>
+        ADDRESS.forEach((value, index, array) => {
+            console.log(value.CityName);
+            // console.log(value.CityEngName);
+        })
         let sel = document.querySelector("#select1");
         sel.addEventListener("change", () => {
             //讀取資料
