@@ -23,6 +23,7 @@
     <input type="text" id="text1" placeholder="keypress">
     <input type="text" id="text2" placeholder="keydown">
     <input type="text" id="text3" placeholder="keyup">
+    <a href="https://www.ispan.com.tw" id="a1">iSpan</a>
     <hr />
     <div class="note"></div>
     <script>
@@ -34,6 +35,13 @@
         let t1 = document.querySelector("#text1");
         let t2 = document.querySelector("#text2");
         let t3 = document.querySelector("#text3");
+
+        document.querySelector("#a1").addEventListener("click", event => {
+            if (!window.confirm("您要跑到一個超級棒的網站，要去嗎?")) {
+                event.preventDefault();
+            }
+
+        })
 
         t1.addEventListener("keypress", event => {
             //a-z 97-122
