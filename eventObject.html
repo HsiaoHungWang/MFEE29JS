@@ -28,11 +28,16 @@
         //let divs = document.querySelectorAll(".note")
         //console.log(divs)
         let divNote = document.querySelector(".note");
+        let flag;
+        let startX;
+        let startY;
+        let divLeft;
+        let divTop;
         // console.log(divNote)
         document.addEventListener("contextmenu", event => event.preventDefault()); //preventDefault() 停止預設行為
-        divNote.addEventListener("mousedown", event => {
+        document.addEventListener("mousedown", event => {
             //a => event object
-            console.log(event)
+            //console.log(event)
             // //事件對象
             // console.log(event.target);
             // console.log(event.currentTarget);
@@ -51,15 +56,31 @@
             //         break;
             // }
 
-            console.log(event.screenX, event.screenY); //螢幕的左上角當成 0,0
-            console.log(event.clientX, event.clientY); //瀏覽器視窗的左上角當成 0,0
-            console.log(event.offsetX, event.offsetY); //事件對象的左上角當成 0, 0
+            // console.log(event.screenX, event.screenY); //螢幕的左上角當成 0,0
+            // console.log(event.clientX, event.clientY); //瀏覽器視窗的左上角當成 0,0
+            // console.log(event.offsetX, event.offsetY); //事件對象的左上角當成 0, 0
             // console.log(event.target.offsetLeft, event.target.offsetTop); //事件對象的左上角的位置
+            flag = true;
+            startX = event.clientX;
+            startY = event.clientY;
+            divLeft = divNote.offsetLeft;
+            divTop = divNote.offsetTop;
+
+            console.log("down");
         })
         // divs[0].addEventListener("mousedown", (event) => {
         //     //a => event object
         //     console.log(event)
         // })
+
+        document.addEventListener("mouseup", () => flag = false);
+        document.addEventListener("mousemove", event => {
+            if (flag) {
+                //console.log(event.clientX, event.clientY);
+                divNote.style.left = divLeft + (event.clientX - startX) + "px";
+                divNote.style.top = divTop + (event.clientY - startY) + "px";
+            }
+        });
     </script>
 </body>
 
