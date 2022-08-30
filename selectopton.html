@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="select1">
+        <option value="1">Item1</option>
+        <option value="2">Item2</option>
+    </select>
+
+    <script>
+        let sel = document.querySelector("#select1");
+        sel.addEventListener("change", () => {
+            //讀取資料
+            //console.log(sel.selectedIndex);
+            console.log(sel.options[sel.selectedIndex].value);
+            console.log(sel.options[sel.selectedIndex].text);
+        })
+        //新增方法一
+        sel.options.add(new Option("Item3", 3));
+        //新增方法二
+        sel[sel.options.length] = new Option("Item4", 4);
+        sel[sel.options.length] = new Option("Item5", 5);
+
+        //清除
+        //sel.options.length = 0;
+    </script>
+</body>
+
+</html>
