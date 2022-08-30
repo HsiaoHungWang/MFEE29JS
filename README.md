@@ -55,4 +55,5 @@ let guessNum = Math.floor(num * 100); //取整數
 至少要有一個數字
 至少要有一個特殊字元
 ```
+9. 完成三個 select 標籤的連動功能
 
