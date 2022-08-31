@@ -6,11 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .s1 {
+            width: 50%;
+        }
+
+        .s2 {
+            border: 1px solid green;
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
+    <select>
+        <option>Item1</option>
+        <option selected>Item2</option>
+        <option>Item3</option>
+    </select>
+    <input type="checkbox">
+    <input type="checkbox" checked>
     <input type="button" value="新增" id="buttonCreate">
-    <input type="button" value="刪除" id="buttonRemove">
+    <input type="button" value="刪除" id="buttonRemove" disabled>
+
     <div id="div1">
         <p>aaaaa</p>
         <p>bbbbb</p>
@@ -31,8 +49,33 @@
             //透過appendChild()建立關係
             eleH3.appendChild(txtH3);  //<h3>Hello DOM!!</h3>
 
+            //建立圖片的元素節點
+            let eleImg = document.createElement("img"); //<img />
+            //建立屬性
+            eleImg.setAttribute("src", "images/Logoslogan_sm.png"); //<img src="images/Logoslogan_sm.png" />
+            eleImg.classList.add("s1", "s2"); //<img src="images/Logoslogan_sm.png" class="s1 s2" />
+
+            eleImg.addEventListener("mouseover", toggle);
+            eleImg.addEventListener("mouseout", toggle);
+
             theDiv.appendChild(eleH3); //<div><h3>Hello DOM!!</h3>
+            theDiv.appendChild(eleImg);
+
+            //刪除屬性
+            document.querySelector("#buttonRemove").removeAttribute("disabled");
         });
+
+        function toggle(event) {
+            let theImg = event.target;
+            let imgSrc = theImg.getAttribute("src");
+
+            if (imgSrc.indexOf("Logoslogan_sm") != -1) {
+                theImg.setAttribute("src", "images/RainbowLogo.png");
+
+            } else {
+                theImg.setAttribute("src", "images/Logoslogan_sm.png");
+            }
+        }
 
         document.querySelector("#buttonRemove").addEventListener("click", () => {
             // let theNode = theDiv.querySelector("h3");
@@ -42,9 +85,9 @@
 
             //刪除所有子節點
             //console.log(theDiv.hasChildNodes()); //沒有子節點會回傳false
-            while (theDiv.hasChildNodes()) {
-                theDiv.removeChild(theDiv.lastChild);
-            }
+            // while (theDiv.hasChildNodes()) {
+            //     theDiv.removeChild(theDiv.lastChild);
+            // }
         })
 
     </script>
