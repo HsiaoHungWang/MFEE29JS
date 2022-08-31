@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>aaaa</h1>
+    <script>
+        let theH = document.querySelector("h1");
+        //元素節點
+        console.log(theH.nodeType); //1
+        console.log(theH.nodeName); //H1
+        console.log(theH.nodeValue); //? null
+
+        //文字節點
+        console.log(theH.firstChild.nodeType); //3
+        console.log(theH.firstChild.nodeName); //? #text
+        console.log(theH.firstChild.nodeValue); //aaaa  
+        console.log(theH.textContent); //aaaa
+        console.log(theH.innerText);  //aaaa
+
+    </script>
+</body>
+
+</html>
