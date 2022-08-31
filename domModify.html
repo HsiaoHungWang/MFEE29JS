@@ -11,7 +11,12 @@
 <body>
     <input type="button" value="新增" id="buttonCreate">
     <input type="button" value="刪除" id="buttonRemove">
-    <div id="div1"></div>
+    <div id="div1">
+        <p>aaaaa</p>
+        <p>bbbbb</p>
+        <p>ccccc</p>
+    </div>
+
 
     <script>
         const theDiv = document.querySelector("#div1");
@@ -30,9 +35,16 @@
         });
 
         document.querySelector("#buttonRemove").addEventListener("click", () => {
-            let theNode = theDiv.querySelector("h3");
-            theDiv.removeChild(theNode);
-            //theNode.parentNode.removeChild(theNode);
+            // let theNode = theDiv.querySelector("h3");
+            // //刪除子節點
+            // theDiv.removeChild(theNode);
+            // //theNode.parentNode.removeChild(theNode);
+
+            //刪除所有子節點
+            //console.log(theDiv.hasChildNodes()); //沒有子節點會回傳false
+            while (theDiv.hasChildNodes()) {
+                theDiv.removeChild(theDiv.lastChild);
+            }
         })
 
     </script>
