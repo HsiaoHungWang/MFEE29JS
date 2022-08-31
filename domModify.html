@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="新增" id="buttonCreate">
+    <input type="button" value="刪除" id="buttonRemove">
+    <div id="div1"></div>
+
+    <script>
+        const theDiv = document.querySelector("#div1");
+        document.querySelector("#buttonCreate").addEventListener("click", () => {
+            //theDiv.textContent = "Hello JavaScript"
+            //theDiv.innerHTML = "<h3>Hello JavaScript</h3>";
+            //DOM
+            //建立元素節點
+            let eleH3 = document.createElement("h3");  //<h3>
+            //建立文字節點
+            let txtH3 = document.createTextNode("Hello DOM!!"); //Hello DOM!!
+            //透過appendChild()建立關係
+            eleH3.appendChild(txtH3);  //<h3>Hello DOM!!</h3>
+
+            theDiv.appendChild(eleH3); //<div><h3>Hello DOM!!</h3>
+        });
+
+        document.querySelector("#buttonRemove").addEventListener("click", () => {
+            let theNode = theDiv.querySelector("h3");
+            theDiv.removeChild(theNode);
+            //theNode.parentNode.removeChild(theNode);
+        })
+
+    </script>
+</body>
+
+</html>

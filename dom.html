@@ -12,18 +12,21 @@
     <h1>
         <u>aaaa</u>
     </h1>
-    <ul>
-        <li>aaaaa</li>
-        <li>bbbbb</li>
-        <li>ccccc</li>
-        <li>ddddd</li>
-        <li>eeeee</li>
-    </ul>
-    <ul>
-        <li>xxxx</li>
-        <li>yyyy</li>
-        <li>zzzz</li>
-    </ul>
+    <div>
+        <ul>
+            <li>aaaaa</li>
+            <li>bbbbb</li>
+            <li>ccccc</li>
+            <li>ddddd</li>
+            <li>eeeee</li>
+        </ul>
+        <ul>
+            <li>xxxx</li>
+            <li>yyyy</li>
+            <li>zzzz</li>
+        </ul>
+    </div>
+
     <script>
         // let theH = document.querySelector("h1");
         // //元素節點
@@ -59,7 +62,7 @@
         // console.log(uls[1].getElementsByTagName("li").length);
 
         console.log(document.querySelectorAll("li").length);
-        console.log(document.querySelectorAll("ul:nth-child(3)>li").length);
+        console.log(document.querySelectorAll("div>ul:nth-child(2)>li:nth-child(2)")[0].firstChild.nodeValue);
 
     </script>
 </body>
