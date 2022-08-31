@@ -9,21 +9,45 @@
 </head>
 
 <body>
-    <h1>aaaa</h1>
+    <h1>
+        <u>aaaa</u>
+    </h1>
+    <ul>
+        <li>aaaaa</li>
+        <li>bbbbb</li>
+        <li>ccccc</li>
+        <li>ddddd</li>
+        <li>eeeee</li>
+    </ul>
     <script>
-        let theH = document.querySelector("h1");
-        //元素節點
-        console.log(theH.nodeType); //1
-        console.log(theH.nodeName); //H1
-        console.log(theH.nodeValue); //? null
+        // let theH = document.querySelector("h1");
+        // //元素節點
+        // console.log(document.documentElement.nodeName); //HTML
 
-        //文字節點
-        console.log(theH.firstChild.nodeType); //3
-        console.log(theH.firstChild.nodeName); //? #text
-        console.log(theH.firstChild.nodeValue); //aaaa  
-        console.log(theH.textContent); //aaaa
-        console.log(theH.innerText);  //aaaa
+        // console.log(theH.nodeType); //1
+        // console.log(theH.nodeName); //H1
+        // console.log(theH.nodeValue); //? null
 
+        // //文字節點
+        // console.log(theH.firstChild.nodeType); //3
+        // console.log(theH.firstChild.nodeName); //? #text
+        // console.log(theH.firstChild.nodeValue); //aaaa  
+        // console.log(theH.textContent); //aaaa
+        // console.log(theH.innerText);  //aaaa
+        // console.log(theH.innerHTML); //
+
+        let theUl = document.querySelector("ul");
+        // console.log(theUl.childNodes.length); //11
+        // console.log(theUl.firstChild.nodeName); //x LI => #text \n
+        // for (let i = 0, max = theUl.childNodes.length; i < max; i++) {
+        //     if (theUl.childNodes[i].nodeType === 1) {
+        //         console.log(theUl.childNodes[i].nodeName)
+        //         console.log(theUl.childNodes[i].firstChild.nodeValue)
+        //     }
+        // }
+        console.log(theUl.childNodes[5].firstChild.nodeValue); //ccccc
+        console.log(theUl.childNodes[5].previousSibling.previousSibling.firstChild.nodeValue); //bbbbb
+        console.log(theUl.childNodes[5].nextSibling.nextSibling.firstChild.nodeValue); //ddddd
     </script>
 </body>
 
