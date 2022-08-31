@@ -38,6 +38,7 @@
 
     <script>
         const theDiv = document.querySelector("#div1");
+        let docFrag = document.createDocumentFragment();
         document.querySelector("#buttonCreate").addEventListener("click", () => {
             //theDiv.textContent = "Hello JavaScript"
             //theDiv.innerHTML = "<h3>Hello JavaScript</h3>";
@@ -58,8 +59,9 @@
             eleImg.addEventListener("mouseover", toggle);
             eleImg.addEventListener("mouseout", toggle);
 
-            theDiv.appendChild(eleH3); //<div><h3>Hello DOM!!</h3>
-            theDiv.appendChild(eleImg);
+            docFrag.appendChild(eleH3); //<div><h3>Hello DOM!!</h3>
+            docFrag.appendChild(eleImg);
+            theDiv.appendChild(docFrag);
 
             //刪除屬性
             document.querySelector("#buttonRemove").removeAttribute("disabled");
@@ -89,6 +91,17 @@
             //     theDiv.removeChild(theDiv.lastChild);
             // }
         })
+
+            (function () {
+                let theNode = document.querySelector("#div1")
+                while (true) {
+                    theNode
+
+                }
+            })();
+
+
+
 
     </script>
 </body>
