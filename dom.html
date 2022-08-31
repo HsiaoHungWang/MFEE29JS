@@ -19,6 +19,11 @@
         <li>ddddd</li>
         <li>eeeee</li>
     </ul>
+    <ul>
+        <li>xxxx</li>
+        <li>yyyy</li>
+        <li>zzzz</li>
+    </ul>
     <script>
         // let theH = document.querySelector("h1");
         // //元素節點
@@ -45,9 +50,17 @@
         //         console.log(theUl.childNodes[i].firstChild.nodeValue)
         //     }
         // }
-        console.log(theUl.childNodes[5].firstChild.nodeValue); //ccccc
-        console.log(theUl.childNodes[5].previousSibling.previousSibling.firstChild.nodeValue); //bbbbb
-        console.log(theUl.childNodes[5].nextSibling.nextSibling.firstChild.nodeValue); //ddddd
+        // console.log(theUl.childNodes[5].firstChild.nodeValue); //ccccc
+        // console.log(theUl.childNodes[5].previousSibling.previousSibling.firstChild.nodeValue); //bbbbb
+        // console.log(theUl.childNodes[5].nextSibling.nextSibling.firstChild.nodeValue); //ddddd
+
+        // console.log(document.getElementsByTagName("li").length);  //8
+        // let uls = document.getElementsByTagName("ul"); //2
+        // console.log(uls[1].getElementsByTagName("li").length);
+
+        console.log(document.querySelectorAll("li").length);
+        console.log(document.querySelectorAll("ul:nth-child(3)>li").length);
+
     </script>
 </body>
 
