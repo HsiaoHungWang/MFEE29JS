@@ -35,50 +35,34 @@
     <script src="datas/travel.js"></script>
     <script>
         const inputText = document.querySelector("#autocomplete");
-        const listData = document.querySelector(".list-group");       
-
+        const listData = document.querySelector(".list-group");
+        listData.style.display = "none";
         inputText.addEventListener("input", event => {
             //使用者要搜尋的內容
-            let keyword = event.target.value;
+            let keyword = event.target.value.trim();
+            if (keyword !== "") {
+                listData.style.display = "block";
+                //搜尋景點名稱中有使用者搜尋的內容
+                let results = DATAS.filter(data => data.Name.indexOf(keyword) !== -1)
 
-            //先清除原有的搜尋結果
-            while (listData.hasChildNodes()) {
-                listData.removeChild(listData.lastChild);
+                //顯示搜尋結果
+                //["<button>","<button>"]
+                let htmldatas = results.map(data => {
+                    return (
+                        `<button type="button" onclick="read(event)" class="list-group-item list-group-item-action">${data.Name.trim()}</button>`
+                    )
+                })
+                listData.innerHTML = htmldatas.join(""); //<button><button>
             }
 
-            //搜尋景點名稱中有使用者搜尋的內容
-            let results = DATAS.filter(data => data.Name.indexOf(keyword) !== -1)
-
-            //顯示搜尋結果
-            //建立一個空的容器
-            let docFrag = document.createDocumentFragment();
-            results.forEach(data => {
-                let { Name } = data;
-                //DOM
-                //建立元素節點 <button>
-                let btn = document.createElement("button");
-                //加入屬性 <button type="button">
-                btn.setAttribute("type", "button");
-                //加入樣式 <button type="button" class="list-group-item list-group-item-action">
-                btn.classList.add("list-group-item", "list-group-item-action");
-                //綁定一個click
-                btn.addEventListener("click",event=>{
-                    inputText.value = event.target.textContent;
-                })
-                //建立文字節點  中壢光影電影館(光影一館)          
-                let txtBtn = document.createTextNode(Name);
-                //<button type="button" class="list-group-item list-group-item-action">中壢光影電影館(光影一館)</button>
-                btn.appendChild(txtBtn);
-                //將建立好的button加入到空的容器中
-                docFrag.appendChild(btn);
-
-            })
-            //將docFrag裡面的button新增到網頁上
-            listData.appendChild(docFrag);
 
 
 
         })
+        function read(evt) {
+            inputText.value = evt.target.textContent;
+            listData.style.display = "none";
+        }
     </script>
 </body>
 
