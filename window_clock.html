@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Start" id="button1">
+    <div id="div1">00:00:00</div>
+
+    <script>
+        let btn = document.querySelector("#button1");
+        let divClock = document.querySelector("#div1");
+        let t = null;
+        
+        btn.addEventListener("click",()=>{
+           if(btn.value === "Start"){
+              //啟動計時器
+           t =  window.setInterval(clock, 1000);
+            btn.value = "Stop";
+           }else{          
+            btn.value = "Start";
+            //停止計時
+            window.clearInterval(t);
+           }
+        })
+
+        function clock(){
+            let today = new Date();
+            let hour = today.getHours();
+            let min = today.getMinutes();
+            let sec = today.getSeconds();
+            divClock.innerHTML = `${hour} : ${min} : ${sec}`;
+          
+        }
+    </script>
+</body>
+</html>
