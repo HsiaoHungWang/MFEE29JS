@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="button1">Click</button>
+    <!-- this 代表的是某一個物件 -->
+    <!-- this 代表的是呼叫這個function的物件 -->
+    <!-- 箭頭函式 this 是由外層作用域來決定 -->
+    <script>
+        console.log(this);  //Window
+        function sayHi() {
+            // console.log(this); //Window
+            'use strict'
+            console.log(this);  //undefined
+        }
+
+        sayHi();  //window.sayHi();
+
+        let User = {
+            "name": "Tom",
+            "saySomething": function () {
+                console.log(this); //User=>{}
+            }
+        }
+        User.saySomething();
+
+        document.querySelector("#button1").addEventListener("click", function () {
+            console.log(this); //button
+        })
+        document.querySelector("#button1").addEventListener("click", () => {
+            console.log(this); //Window
+        })
+
+        let User1 = {
+            "name": "Jack",
+            "saySomething": function () {
+                console.log(this); //User1
+                setTimeout(function () {
+                    console.log(this); //Window
+                }, 1000);
+                setTimeout(() => {
+                    console.log(this);  //User1
+                }, 1000)
+            }
+        }
+        User1.saySomething();
+    </script>
+</body>
+
+</html>
